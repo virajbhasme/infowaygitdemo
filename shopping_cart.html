@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Shopping Cart</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' href='css/bootstrap.min.css'>
+    <script src='js/bootstrap.min.js'></script>
+    <style>
+        #light{
+            color: black;
+            background-color: white;
+        }
+        #dark{
+            color: white;
+            background-color: black;
+        }
+        #qty{
+            width: 80px;
+            height: 20px;
+            padding: 2px;
+        }
+        #img{
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">    
+    <h1 class="bg-warning text-danger">Shopping Cart</h1>
+    <div class="row mt-5" id="light">
+        <div class="card-fluid border border-dark rounded col-3 p-0" id="card1">
+                <div class="card-body">
+                    <div class="text-center mt-0"><input type="checkbox" onclick="product(1)"  id="check1" /></div>
+                        <img class="card-img" src="images/smartphone.jpg">
+                    <div class="card-body">
+                        <span>Name: </span> <span id="name1">Smartphone</span><br>
+                        <span>Desciption: </span>Smart features with 128GB memory and 8GB RAM, 5000mah Battery<br>
+                        <span>Price: </span><span id="p1">15999</span><br>
+                    <div class="row">
+                        <div class="col-2"><span>Qty:</span></div>
+                        <div class="col-6"><input type="number" class="form-control" value="1" min="1" max="10" id="q1"></div>
+                    </div>                         
+               </div>
+            </div>
+        </div>
+        <div class="card-fluid border border-dark rounded col-3 p-0" id="card2">
+            <div class="card-body">
+                <div class="text-center mt-0"><input type="checkbox" onclick="product(2)"  id="check2" /></div>
+                    <img class="card-img" src="images/laptop.jpg">
+                <div class="card-body">
+                    <span>Name: </span> <span id="name2">Laptop</span><br>
+                    <span>Desciption: </span>Laptop having intel i-5 processor, 8GB RAM, 1TB ROM<br>
+                    <span>Price: </span><span id="p2">45999</span><br>
+                <div class="row">
+                    <div class="col-2"><span>Qty:</span></div>
+                    <div class="col-6"><input type="number" class="form-control" value="1" min="1" max="10" id="q2"></div>
+                </div>                         
+           </div>
+        </div>
+    </div>
+    <div class="card-fluid border border-dark rounded col-3 p-0" id="card3">
+        <div class="card-body">
+            <div class="text-center mt-0"><input type="checkbox" onclick="product(3)"  id="check3" /></div>
+                <img class="card-img" src="images/smarttv.jpg">
+            <div class="card-body">
+                <span>Name: </span> <span id="name3">Smart TV</span><br>
+                <span>Desciption: </span>Smart features with android OS, 4K LED,Vivid Colours.<br>
+                <span>Price: </span><span id="p3">35999</span><br>
+            <div class="row">
+                <div class="col-2"><span>Qty:</span></div>
+                <div class="col-6"><input type="number" class="form-control" value="1" min="1" max="10" id="q3"></div>
+            </div>                         
+       </div>
+    </div>
+</div>
+<div class="card-fluid border border-dark rounded col-3 p-0" id="card4">
+    <div class="card-body">
+        <div class="text-center mt-0"><input type="checkbox" onclick="product(4)"  id="check4" /></div>
+            <img class="card-img" src="images/camera.jpg">
+        <div class="card-body">
+            <span>Name: </span> <span id="name4">Camera</span><br>
+            <span>Desciption: </span>Digital SLR Camera with 128 Mega-pixels, 30px zoom.<br>
+            <span>Price: </span><span id="p4">20999</span><br>
+        <div class="row">
+            <div class="col-2"><span>Qty:</span></div>
+            <div class="col-6"><input type="number" class="form-control" value="1" min="1" max="10" id="q4"></div>
+        </div>                         
+   </div>
+</div>
+</div>        
+</div>
+<div class="row mt-5 " id="dark">
+<div class="card-fluid border border-dark rounded col-3 p-0" id="card5">
+        <div class="card-body">
+            <div class="text-center mt-0"><input type="checkbox" onclick="product(5)"  id="check5" /></div>
+                <img class="card-img" src="images/smartwatch.jpg">
+            <div class="card-body">
+                <span>Name: </span> <span id="name5">Smart Watch</span><br>
+                <span>Desciption: </span> Smart features with digital clock, calling, count heartbeats.<br>
+                <span>Price: </span><span id="p5">5999</span><br>
+            <div class="row">
+                <div class="col-2"><span>Qty:</span></div>
+                <div class="col-6"><input type="number" class="form-control" value="1" min="1" max="10" id="q5"></div>
+            </div>                         
+       </div>
+    </div>
+</div>
+<div class="card-fluid border border-dark rounded col-3 p-0" id="card6">
+    <div class="card-body">
+        <div class="text-center mt-0"><input type="checkbox" onclick="product(6)"  id="check6" /></div>
+            <img class="card-img" src="images/headphones.jpg">
+        <div class="card-body">
+            <span>Name: </span> <span id="name6">Headphones</span><br>
+            <span>Desciption: </span>Wireless Headphones with clear sound and high bass.<br>
+            <span>Price: </span><span id="p6">1999</span><br>
+        <div class="row">
+            <div class="col-2"><span>Qty:</span></div>
+            <div class="col-6"><input type="number" class="form-control" value="1" min="1" max="10" id="q6"></div>
+        </div>                         
+   </div>
+</div>
+</div>
+<div class="card-fluid border border-dark rounded col-3 p-0" id="card7">
+<div class="card-body">
+    <div class="text-center mt-0"><input type="checkbox" onclick="product(7)"  id="check7" /></div>
+        <img class="card-img" src="images/hometheater.jpg">
+    <div class="card-body">
+        <span>Name: </span> <span id="name7">Home Theater</span><br>
+        <span>Desciption: </span>High sound quality with best bass effects and clear sound effect.<br>
+        <span>Price: </span><span id="p7">8999</span><br>
+    <div class="row">
+        <div class="col-2"><span>Qty:</span></div>
+        <div class="col-6"><input type="number" class="form-control" value="1" min="1" max="10" id="q7"></div>
+    </div>                         
+</div>
+</div>
+</div>
+<div class="card-fluid border border-dark rounded col-3 p-0" id="card8">
+<div class="card-body">
+<div class="text-center mt-0"><input type="checkbox" onclick="product(8)"  id="check8" /></div>
+    <img class="card-img" src="images/pendrive.jpg">
+<div class="card-body">
+    <span>Name: </span> <span id="name8">Pendrive</span><br>
+    <span>Desciption: </span>USB Pendrive of 64GB Memory with feature of fast file transfer.<br>
+    <span>Price: </span><span id="p8">1299</span><br>
+<div class="row">
+    <div class="col-2"><span>Qty:</span></div>
+    <div class="col-6"><input type="number" class="form-control" value="1" min="1" max="10" id="q8"></div>
+</div>                         
+</div>
+</div>
+</div>        
+</div>
+<div class="row mt-5 " id="light">
+<div class="card-fluid border border-dark rounded col-3 p-0" id="card9">
+        <div class="card-body">
+            <div class="text-center mt-0"><input type="checkbox" onclick="product(9)"  id="check9" /></div>
+                <img class="card-img" src="images/sportshoes.jpg">
+            <div class="card-body">
+                <span>Name: </span> <span id="name9">Sport Shoes</span><br>
+                <span>Desciption: </span>Sport shoes for running and various sports activities.<br>
+                <span>Price: </span><span id="p9">2499</span><br>
+            <div class="row">
+                <div class="col-2"><span>Qty:</span></div>
+                <div class="col-6"><input type="number" class="form-control" value="1" min="1" max="10" id="q9"></div>
+            </div>                         
+       </div>
+    </div>
+</div>
+<div class="card-fluid border border-dark rounded col-3 p-0" id="card10">
+    <div class="card-body">
+        <div class="text-center mt-0"><input type="checkbox" onclick="product(10)"  id="check10" /></div>
+            <img class="card-img" src="images/sunglasses.jpg">
+        <div class="card-body">
+            <span>Name: </span> <span id="name10">Sunglasses</span><br>
+            <span>Desciption: </span>Sunglasses features with more durable, flexible.<br>
+            <span>Price: </span><span id="p10">1199</span><br>
+        <div class="row">
+            <div class="col-2"><span>Qty:</span></div>
+            <div class="col-6"><input type="number" class="form-control" value="1" min="1" max="10" id="q10"></div>
+        </div>                         
+   </div>
+</div>
+</div>
+<div class="card-fluid border border-dark rounded col-3 p-0" id="card11">
+<div class="card-body">
+    <div class="text-center mt-0"><input type="checkbox" onclick="product(11)"  id="check11" /></div>
+        <img class="card-img" src="images/ledbulb.jpg">
+    <div class="card-body">
+        <span>Name: </span> <span id="name11">LED Bulb</span><br>
+        <span>Desciption: </span>9 Watt power, 12 Volts with Bright white light, 1 year warranty.<br>
+        <span>Price: </span><span id="p11">499</span><br>
+    <div class="row">
+        <div class="col-2"><span>Qty:</span></div>
+        <div class="col-6"><input type="number" class="form-control" value="1" min="1" max="10" id="q11"></div>
+    </div>                         
+</div>
+</div>
+</div>
+<div class="card-fluid border border-dark rounded col-3 p-0" id="card12">
+<div class="card-body">
+<div class="text-center mt-0"><input type="checkbox" onclick="product(12)"  id="check12" /></div>
+    <img class="card-img" src="images/waterbottle.jpg">
+<div class="card-body">
+    <span>Name: </span> <span id="name12">Water Bottle</span><br>
+    <span>Desciption: </span>Stainless steel water bottle, durable, store hot and cold water.<br>
+    <span>Price: </span><span id="p12">899</span><br>
+<div class="row">
+    <div class="col-2"><span>Qty:</span></div>
+    <div class="col-6"><input type="number" class="form-control" value="1" min="1" max="10" id="q12"></div>
+</div>                         
+</div>
+</div>
+</div>        
+</div>
+<div class="row mt-5 " id="dark">
+<div class="card-fluid border border-dark rounded col-3 p-0" id="card13">
+        <div class="card-body">
+            <div class="text-center mt-0"><input type="checkbox" onclick="product(13)"  id="check13" /></div>
+                <img class="card-img" src="images/backpack.jpg">
+            <div class="card-body">
+                <span>Name: </span> <span id="name13">Backpack</span><br>
+                <span>Desciption: </span>Backpack with 3 Compartments.Available in different colors.<br>
+                <span>Price: </span><span id="p13">2299</span><br>
+            <div class="row">
+                <div class="col-2"><span>Qty:</span></div>
+                <div class="col-6"><input type="number" class="form-control" value="1" min="1" max="10" id="q13"></div>
+            </div>                         
+       </div>
+    </div>
+</div>
+<div class="card-fluid border border-dark rounded col-3 p-0" id="card14">
+    <div class="card-body">
+        <div class="text-center mt-0"><input type="checkbox" onclick="product(14)"  id="check14" /></div>
+            <img class="card-img" src="images/shirt.jpg">
+        <div class="card-body">
+            <span>Name: </span> <span id="name14">Shirt</span><br>
+            <span>Desciption: </span>Casual Men's Shirt- 100% Cotton, Available Sizes-S, M, L, XL, XXL and different colours.<br>
+            <span>Price: </span><span id="p14">799</span><br>
+        <div class="row">
+            <div class="col-2"><span>Qty:</span></div>
+            <div class="col-6"><input type="number" class="form-control" value="1" min="1" max="10" id="q14"></div>
+        </div>                         
+   </div>
+</div>
+</div>
+<div class="card-fluid border border-dark rounded col-3 p-0" id="card15">
+<div class="card-body">
+    <div class="text-center mt-0"><input type="checkbox" onclick="product(15)"  id="check15" /></div>
+        <img class="card-img" src="images/pants.jpg">
+    <div class="card-body">
+        <span>Name: </span> <span id="name15">Pants</span><br>
+        <span>Desciption: </span>Men's Casual Pants- Mixed Fabric, Available Sizes-S, M, L, XL, XXL and different colors.<br>
+        <span>Price: </span><span id="p15">999</span><br>
+    <div class="row">
+        <div class="col-2"><span>Qty:</span></div>
+        <div class="col-6"><input type="number" class="form-control" value="1" min="1" max="10" id="q15"></div>
+    </div>                         
+</div>
+</div>
+</div>
+<div class="card-fluid border border-dark rounded col-3 p-0" id="card16">
+<div class="card-body">
+<div class="text-center mt-0"><input type="checkbox" onclick="product(16)"  id="check16" /></div>
+    <img class="card-img" src="images/dress.jpg">
+<div class="card-body">
+    <span>Name: </span> <span id="name16">Dress</span><br>
+    <span>Desciption: </span>Women's Casual Dress- 100% Cotton, Available in different sizes and different colors.<br>
+    <span>Price: </span><span id="p16">1399</span><br>
+<div class="row">
+    <div class="col-2"><span>Qty:</span></div>
+    <div class="col-6"><input type="number" class="form-control" value="1" min="1" max="10" id="q1"></div>
+</div>                         
+</div>
+</div>
+</div>        
+</div>
+
+
+<br>
+<h4 style="background-color: skyblue;">Ordered Item</h4>
+<div class="row">
+<div class="col-12">
+    <table id="tab" class="">
+
+    </table>
+</div>
+
+<br>
+</div>
+<hr>
+<button type="button" class="btn btn-primary" onclick="totalSum()">Display Total Amount for Shopping</button><br><br><br><br><br>
+</div>
+<script>
+
+var sum=0;
+var count=0;
+
+    function product(a){
+var c = document.getElementById('check'+a)
+if (c.checked) {
+
+   document.getElementById('q'+a) .disabled=true
+    
+   document.getElementById('card'+a).style.backgroundColor='#F4D160'
+   var ele=document.createElement("tr")
+   ele.id="row"+a
+   document.getElementById('tab').appendChild(ele)
+
+   var el=document.createElement('td')
+   el.id=a
+   document.getElementById('row'+a).appendChild(el)
+
+   var el=document.createElement('td')
+   el.id="item"+a
+   document.getElementById('row'+a).appendChild(el)
+
+   var el=document.createElement('td')
+   el.id="price"+a
+   document.getElementById('row'+a).appendChild(el)
+
+   var el=document.createElement('td')
+   el.id="quantity"+a
+   document.getElementById('row'+a).appendChild(el)
+
+   var el=document.createElement('td')
+   el.id="total"+a
+   document.getElementById('row'+a).appendChild(el)
+  
+ var name = document.getElementById("name"+a)
+ var price =document.getElementById("p"+a)
+ var qt = document.getElementById("q"+a).value
+ var pr=parseInt(price.textContent)*qt
+    sum+=pr
+ count++
+ document.getElementById(a).innerHTML=count+'.&emsp;'
+ document.getElementById("item"+a).innerHTML=name.textContent+'&emsp;'
+ document.getElementById("price"+a).innerHTML=price.textContent+'&emsp;'
+ document.getElementById("quantity"+a).innerHTML=qt+'&emsp;'
+ document.getElementById('total'+a).innerHTML=pr+"&emsp;"
+
+}else{
+    count--
+    var price =document.getElementById("p"+a)
+    var qt = document.getElementById("q"+a).value
+    var pr=parseInt(price.textContent)*qt
+    sum-=pr
+    document.getElementById('q'+a) .disabled=false
+    document.getElementById(a).innerHTML=count+'.&emsp;'
+document.getElementById('tab').removeChild(document.getElementById('row'+a))
+    if (1<=a&&a<=4||9<=a&&a<=12) {
+        document.getElementById('card'+a).style.backgroundColor='#C2FFD9'
+      
+    } else if (5<=a&&a<=8||13<=a&&a<=16) {
+            document.getElementById('card'+a).style.backgroundColor='#seagreen'
+           
+        }
+}
+}
+function totalSum(){
+alert("Total sum: "+sum)
+}
+
+</script>
+</body>
+</html>
